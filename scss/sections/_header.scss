@@ -1,0 +1,160 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    &__scroll-down {
+        position: absolute;
+        left: 50%;
+        bottom: 2%;
+        transform: translateX(-50%);
+        color: black;
+        font-size: 46px;
+        cursor: pointer;
+        animation: upAndDown infinite 2.5s;
+        z-index: 10;
+    }    
+    &__rotating-car-img{
+        width: 4%;
+        opacity: 0.2;
+        position: absolute;
+        // animation: rotateIt infinite 10s linear;
+        filter: grayscale(100%);
+        
+        &--1 {
+            top: 20%;
+            left: 26%; 
+        }
+        &--2 {
+            bottom: 20%;
+            left: 12%;
+        }
+        &--3 {
+            top: 16%;
+            right: 13%;
+        }
+        &--4 {
+            bottom: 10%;
+            right: 6%;
+            width: 2%;
+        }
+    }
+
+
+    &__left-content-wrapper {
+        position: relative;
+    }
+
+    &__left-content {
+        width: 60%;
+        margin: auto;
+        @include centerElement;
+    
+    }
+
+    &__heading {
+        font-family: 'Sora', sans-serif;
+        text-transform: uppercase;
+        font-size: 46px;
+        font-weight: 700;
+        color: $dark-blue;
+        margin-bottom: 20px;
+    }
+
+    &__subheading {
+        font-size: 20px;
+        font-family: 'Roboto', sans-serif;
+        color: rgba(0,0,0,0.7);
+    }
+
+    &__btn {
+        width: 40%;
+        text-align: center;
+        padding: 10px 10px;
+        margin: 10px 0;
+        border-radius: 10px;
+        border: none;
+        background: #dbdbdb;
+        box-shadow: 3px 3px 5px #cecece;
+        transition: all 0.1s ease-in;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+
+        .fab {
+            font-size: 20px;
+            vertical-align: middle;
+        }
+        .fa-android {
+            color: #3DDC84;           
+        }
+        &--android {
+            margin-right: 10px;
+        }
+        &:hover {
+           transform: scale(1.1);
+        }
+    }
+
+
+    &__parking-svg-container {
+        position: relative;
+    }
+
+    &__car-park-illustration {
+        width: 90%;
+        @include centerElement;
+    } 
+}
+
+
+
+@media screen and (max-width: 426px){
+    .header {
+        display: block;
+        &__left-content-wrapper {
+            @include centerElement;
+            width: 100%;
+        }
+        &__heading {
+            text-align: center;
+        }
+        &__subheading {
+            font-size: 16px;
+            text-align: center;
+        }
+        &__btn-container {
+            text-align: center;
+        }
+        &__btn {
+            width: 70%;
+            font-size: 12px;
+            &--android {
+                margin-right: 0;
+            }
+            .fab {
+                vertical-align: middle;
+            }
+        }
+        &__rotating-car-img {
+            width: 10%;
+            animation: rotateIt 10s infinite linear;
+        }
+    
+        &__parking-svg-container {
+           display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 427px) and (max-width: 768px) {
+    .header {
+        &__left-container {
+            width: 80%;
+        }
+        &__btn {
+            width: 40%;
+            font-size: 12px;
+        }
+    }
+    
+}

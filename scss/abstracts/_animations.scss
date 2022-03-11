@@ -1,0 +1,45 @@
+@keyframes upAndDown {
+    0% {
+        bottom: 2%;
+    }    
+    25% {
+        bottom: 3%;
+    }
+    50% {
+        bottom: 2%;
+    }    
+    75% {
+        bottom: 3%;
+    }
+    100% {
+        bottom: 2%
+    }
+}
+
+@keyframes rotateIt {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);  
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0%);
+    }
+    25% {
+        transform: translateX(-0.5%);
+    }
+    50% {
+        transform: translateX(0.5%);
+    }
+    75% {
+        transform: translateX(-0.5%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+
+}

@@ -1,0 +1,47 @@
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden !important;
+    // background-color: #f4f4f4;
+}
+
+header, section {
+    height: 100vh;
+    width: 100vw;
+}
+
+.section-heading {
+    font-size: 48px;
+    color: $dark-blue;
+    font-family: 'Sora', sans-serif;
+
+    &::after {
+        content: '';
+        border: 2px solid $dark-blue;
+        display: block;
+        width: 5%;
+        background-color: $dark-blue;
+        border-radius: 25px;
+        margin-top: 5px;
+        padding: 3px;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .section-heading {
+        font-size: 36px;
+        color: $dark-blue;
+        font-family: 'Sora', sans-serif;
+        text-align: center;
+    
+        &::after {
+            content: '';
+            
+            border: 2px solid $dark-blue;
+            display: block;
+            width: 15%;
+            background-color: $dark-blue;
+            border-radius: 25px;
+            margin: 5px auto;
+            padding: 3px;
+        }
+    } 
+}
